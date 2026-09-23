@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel = "icon" href = "gp.jpg"></a>
+    <title>Glow Pearl | Beauty & Skincare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid"  style="background-color: #3f2025;">
+        <a class="navbar-brand fst-italic fs-2 text-white" href="#">
+          <span class="fw-bold" style="color: #d75a70;">G</span>low
+          <span class="fw-bold" style="color: #d75a70;">P</span>earl
+      </a>        <button class="navbar-toggler" style="color: #d75a70;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto ms-auto my-2 my-lg-0 navbar-nav-scroll d-flex gap-5 " style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: white;" href="#">Bodycare</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: white;" href="#">Makeup</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: white;" href="#">Skincare</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: white;" href="#">About</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: white;" href="#">Blogs</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="card bg-dark"> 
+      <img src="images/aboutpage.webp" class="w-100 h-100 object-fit-cover d-block" alt="Glow Pearl Beauty Products">
+      <div class="card-img-overlay">
+    <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+<h1 class="mb-4" style="font-size: clamp(55px, 7vw, 90px); color: #3f2025;
+       font-family: Cambria, Cochin, Georgia, serif;
+       font-weight: 500;
+       letter-spacing: -2px;">CARD</h1>
+<p class="fw-semibold" style="font-size: 15px;font-family: Cambria, Cochin, Georgia, serif;letter-spacing: 1px;">
+HOME<span class="mx-2" style="color: #f2a5b3;">/</span>ABOUT US<span class="mx-2" style="color: #f2a5b3;">/</span>SHOP</p>
+</div>
+</div>
+</div>
+<section class="py-5">
+<div class="container py-4">
+<div class="row g-5">
+<div class="col-lg-8">
+<div class="mb-4">
+<h2 style="font-family:Cambria, Georgia, serif;font-size:38px;">Your Shopping Bag</h2>
+<p class="text-muted">
+    You have <strong>3 items</strong>
+    in your cart.
+</p>
+</div>
+<div class="d-flex gap-4 py-4 border-bottom">
+<div style="
+    width:160px;
+    height:180px;
+    flex-shrink:0;
+    background-color:#f8e8e7;">
+    <img src="images/serum1.jpg"
+         alt="Vitamin C Serum"
+         class="w-100 h-100"
+         style="object-fit:cover;">
+</div>
+<div class="flex-grow-1">
+    <h4 style="font-family:Cambria, Georgia, serif;">
+        Glow Pearl Vitamin C Serum
+    </h4>
+    <p class="small"
+       style="color:#a66a72;">
+        Skincare
+    </p>
+    <h5>
+        ₹799
+    </h5>
+    <div class="d-flex align-items-center gap-3 mt-3">
+        <div class="d-flex border"
+             style="border-color:#8c565e!important;">
+            <button class="btn btn-sm"
+                    onclick="decrease(1)">
+                −
+            </button>
+            <span id="quantity1"
+                  class="px-3 py-1">
+                1
+            </span>
+            <button class="btn btn-sm"
+                    onclick="increase(1)">
+                +
+            </button>
+        </div>
+        <button class="btn btn-sm"
+                style="color:#8d2534;">
+            <i class="fa-regular fa-trash-can"></i>
+            Remove
+        </button>
+    </div>
+</div>
+</div>
+<div class="d-flex gap-4 py-4 border-bottom">
+<div style="
+    width:160px;
+    height:180px;
+    flex-shrink:0;
+    background-color:#f8e8e7;">
+    <img src="images/moisturizing.jpg"
+         alt="Moisturizer"
+         class="w-100 h-100"
+         style="object-fit:cover;">
+</div>
+<div class="flex-grow-1">
+    <h4 style="
+        font-family:Cambria, Georgia, serif;">
+        Glow Pearl Hydrating Moisturizer
+    </h4>
+    <p class="small"
+       style="color:#a66a72;">
+        Skincare
+    </p>
+    <h5>
+        ₹599
+    </h5>
+    <div class="d-flex align-items-center gap-3 mt-3">
+        <div class="d-flex border">
+            <button class="btn btn-sm" onclick="decrease(2)">
+                −
+            </button>
+            <span id="quantity2"
+                  class="px-3 py-1">
+                1
+            </span>
+
+            <button class="btn btn-sm"
+                    onclick="increase(2)">
+                +
+            </button>
+        </div>
+        <button class="btn btn-sm"
+                style="color:#8d2534;">
+            <i class="fa-regular fa-trash-can"></i>
+            Remove
+        </button>
+    </div>
+</div>
+</div>
+<div class="d-flex gap-4 py-4 border-bottom">
+<div style="
+    width:160px;
+    height:180px;
+    flex-shrink:0;
+    background-color:#f8e8e7;">
+    <img src="images/Sunscreen.webp"
+         alt="Sunscreen"
+         class="w-100 h-100"
+         style="object-fit:cover;">
+</div>
+<div class="flex-grow-1">
+    <h4 style="
+        font-family:Cambria, Georgia, serif;">
+        Glow Pearl Daily Sunscreen SPF 50
+    </h4>
+    <p class="small"
+       style="color:#a66a72;">
+        Skincare
+    </p>
+    <h5>₹699</h5>
+    <div class="d-flex align-items-center gap-3 mt-3">
+        <div class="d-flex border">
+            <button class="btn btn-sm" onclick="decrease(3)">−
+            </button>
+            <span id="quantity3"
+                  class="px-3 py-1">
+                1
+            </span>
+            <button class="btn btn-sm"
+                    onclick="increase(3)">
+                +
+            </button>
+        </div>
+        <button class="btn btn-sm"
+                style="color:#8d2534;">
+            <i class="fa-regular fa-trash-can"></i>
+            Remove
+        </button>
+    </div>
+</div>
+</div>
+<div class="mt-4">
+</div>
+</div>
+<div class="col-lg-4">
+<div class="p-4"
+ style="
+ background-color:#f7eee4;
+ border:1px solid #e4d4d1;
+ ">
+<h2 style="
+    font-family:Cambria, Georgia, serif;
+    ">
+    Order Summary
+</h2>
+<div class="d-flex justify-content-between mt-4">
+    <span>
+        Subtotal
+    </span>
+    <strong>
+        ₹2,097
+    </strong>
+</div>
+<div class="d-flex justify-content-between mt-3">
+    <span>
+        Delivery
+    </span>
+    <strong>
+        FREE
+    </strong>
+</div>
+<div class="d-flex justify-content-between mt-3">
+    <span>
+        Discount
+    </span>
+    <strong>
+        ₹100
+    </strong>
+</div>
+<hr>
+<div class="d-flex justify-content-between mb-4">
+    <h5>
+        Total
+    </h5>
+    <h5 style="color:#8d2534;">
+        ₹1,997
+    </h5>
+</div>
+<div class="input-group mb-4">
+    <input type="text"
+           class="form-control"
+           placeholder="Coupon code">
+    <button class="btn text-white"
+            style="background-color:#3f2025;">
+        Apply
+    </button>
+</div>
+<a href="#"
+   class="btn w-100 text-white py-3"
+   style="background-color:#6f0717;">
+    Proceed to Checkout
+    <i class="fa-solid fa-arrow-right ms-2"></i>
+</a>
+<p class="text-center small text-muted mt-3 mb-0">
+    <i class="fa-solid fa-lock me-1"></i>
+    Secure & Safe Payment
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer style="background-color: #3f2025; color: #ffffff;">
+  <div class="container py-5">
+      <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+              <div class="fst-italic mb-3"
+                   style="font-size: 32px; letter-spacing: -1px;">
+                  <span style="color: #e27688;
+                               font-size: 36px;
+                               font-weight: 700;">
+                      G</span>low
+                  <span style="color: #e27688;
+                               font-size: 36px;
+                               font-weight: 700;">
+                      P</span>earl
+              </div>
+              <p class="mb-4"
+                 style="font-size: 13px;
+                        color: #eadbdd;
+                        line-height: 1.6;">
+                  Simple beauty. Everyday glow.
+              </p>
+              <div class="d-flex gap-4">
+                  <a href="#"
+                     class="text-white text-decoration-none"
+                     style="transition: 0.3s;">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#"
+                     class="text-white text-decoration-none">
+                      <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#"
+                     class="text-white text-decoration-none">
+                      <i class="fa-brands fa-pinterest-p"></i>
+                  </a>
+                  <a href="#"
+                     class="text-white text-decoration-none">
+                      <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#"
+                     class="text-white text-decoration-none">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+              <h6 class="fw-bold mb-4"
+                  style="font-size: 11px;
+                         letter-spacing: 0.5px;">
+                  QUICK LINKS
+              </h6>
+              <div class="d-flex flex-column gap-2">
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Home
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Skincare
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Makeup
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Bodycare
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Best Sellers
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+              <h6 class="fw-bold mb-4"
+                  style="font-size: 11px;
+                         letter-spacing: 0.5px;">
+                  ABOUT
+              </h6>
+              <div class="d-flex flex-column gap-2">
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      About Us
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Our Story
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Beauty Tips
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Blogs
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Reviews
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+              <h6 class="fw-bold mb-4"
+                  style="font-size: 11px;
+                         letter-spacing: 0.5px;">
+                  SERVICES
+              </h6>
+              <div class="d-flex flex-column gap-2">
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Payments
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Shipping
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Product Returns
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Gift Cards
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Offers
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <h6 class="fw-bold mb-4"
+                  style="font-size: 11px;
+                         letter-spacing: 0.5px;">
+                  HELP CENTER
+              </h6>
+              <div class="d-flex flex-column gap-2">
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Contact Us
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      FAQs
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Track Order
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Returns
+                  </a>
+                  <a href="#"
+                     class="text-decoration-none"
+                     style="font-size: 13px;
+                            color: #eadbdd;">
+                      Privacy Policy
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div style="border-top: 1px solid #633b42;">
+      <div class="container">
+          <div class="d-flex flex-column flex-md-row
+                      justify-content-between
+                      align-items-center
+                      py-3">
+              <p class="mb-0"
+                 style="font-size: 11px;
+                        color: #d9c6c9;">
+                  &copy; 2026 Glow Pearl. All rights reserved.
+              </p>
+              <p class="mb-0"
+                 style="font-size: 11px;
+                        color: #d9c6c9;">
+                  Beauty &amp; Skincare Store
+              </p>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+     
