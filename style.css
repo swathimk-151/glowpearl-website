@@ -210,70 +210,468 @@
     white-space: nowrap;
   }
   
-  .sale-section {
+  /* =====================================================
+   SALE OFFER SECTION
+===================================================== */
+
+.sale-section {
     width: 100%;
-  
+
     padding: 55px 6%;
-  
-    background: #f5afaf;
-  }
-  
-  .sale-banner {
+
+    background: #fffaf8;
+}
+
+
+/* Main Banner */
+
+.sale-banner {
     width: 100%;
-  
+
     min-height: 430px;
-  
+
     position: relative;
-  
+
     overflow: hidden;
-  
+
     border-radius: 12px;
-  
-    background: #f5afaf;
-  }
-  
-  .sale-banner > img {
+
+    background: #f3b2b2;
+}
+
+
+/* Banner Image */
+
+.sale-banner > img {
     position: absolute;
-  
+
+    inset: 0;
+
     width: 100%;
     height: 100%;
-  
+
     object-fit: cover;
-  
+
     z-index: 1;
-  }
-  .sale-banner::after {
+}
+
+
+/* Slight overlay so text is readable */
+
+.sale-banner::after {
     content: "";
+
     position: absolute;
-  }
-  .sale-content {
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 210, 210, 0.96) 0%,
+        rgba(255, 205, 205, 0.88) 38%,
+        rgba(255, 205, 205, 0.25) 70%,
+        rgba(255, 205, 205, 0.05) 100%
+    );
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   SALE CONTENT
+===================================================== */
+
+.sale-content {
     position: relative;
+
     z-index: 3;
+
     width: 55%;
+
     min-height: 430px;
+
     padding: 55px 60px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
-  }
-  .sale-small {
+}
+
+
+/* Small Heading */
+
+.sale-small {
     font-size: 12px;
+
     font-weight: 700;
+
     letter-spacing: 2px;
+
     color: #c93f5a;
+
     margin-bottom: 15px;
-  }
-  .sale-content h2 {
+}
+
+
+/* Main Heading */
+
+.sale-content h2 {
     font-size: clamp(38px, 4.5vw, 65px);
+
     line-height: 1;
+
     letter-spacing: -3px;
+
     color: #111;
+
     margin-bottom: 20px;
-  }
-  .sale-content h2 span {
+}
+
+.sale-content h2 span {
     display: block;
+
     color: #d94d68;
-  }
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price-details {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+.original-price {
+    color: #777;
+
+    font-size: 17px;
+
+    text-decoration: line-through;
+}
+
+
+.offer-price {
+    font-size: 27px;
+
+    font-weight: 800;
+
+    color: #111;
+}
+
+
+.discount {
+    padding: 7px 11px;
+
+    border-radius: 5px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* Description */
+
+.sale-description {
+    max-width: 470px;
+
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   VOUCHER
+===================================================== */
+
+.voucher-box {
+    width: fit-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 10px 15px;
+
+    margin-bottom: 23px;
+
+    border: 1px dashed #c93f5a;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 6px;
+}
+
+
+.voucher-box small {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #777;
+
+    margin-bottom: 3px;
+}
+
+
+.voucher-box strong {
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    color: #c93f5a;
+}
+
+
+.gift {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #222;
+
+    border-left: 1px solid #ccc;
+
+    padding-left: 20px;
+}
+
+
+/* =====================================================
+   SALE BUTTON
+===================================================== */
+
+.sale-btn {
+    width: fit-content;
+
+    padding: 15px 24px;
+
+    border-radius: 30px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: 0.3s;
+}
+
+
+.sale-btn:hover {
+    background: #d94d68;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   FREE GIFT BADGE
+===================================================== */
+
+.gift-badge {
+    position: absolute;
+
+    z-index: 4;
+
+    right: 7%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 145px;
+
+    height: 145px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    border: 5px solid #f3b2b2;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    transform-origin: center;
+
+    animation: giftFloat 3s ease-in-out infinite;
+}
+
+
+.gift-badge span {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    color: #d94d68;
+
+    letter-spacing: 1px;
+}
+
+
+.gift-badge strong {
+    font-size: 22px;
+
+    line-height: 0.95;
+
+    color: #111;
+
+    margin: 5px 0;
+}
+
+
+.gift-badge small {
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+@keyframes giftFloat {
+
+    0%,
+    100% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(-56%);
+    }
+}
+
+
+/* =====================================================
+   SALE RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .sale-content {
+        width: 70%;
+
+        padding: 45px;
+    }
+
+    .gift-badge {
+        right: 4%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sale-section {
+        padding: 35px 5%;
+    }
+
+    .sale-banner {
+        min-height: 600px;
+    }
+
+    .sale-content {
+        width: 100%;
+
+        min-height: 600px;
+
+        padding: 40px 25px;
+
+        justify-content: flex-start;
+
+        padding-top: 50px;
+    }
+
+    .sale-content h2 {
+        font-size: 43px;
+    }
+
+    .sale-banner::after {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 210, 210, 0.97) 0%,
+            rgba(255, 205, 205, 0.88) 60%,
+            rgba(255, 205, 205, 0.35) 100%
+        );
+    }
+
+    .gift-badge {
+        width: 110px;
+        height: 110px;
+
+        right: 25px;
+
+        top: auto;
+        bottom: 25px;
+
+        transform: none;
+    }
+
+    .gift-badge strong {
+        font-size: 17px;
+    }
+
+    .price-details {
+        flex-wrap: wrap;
+    }
+
+    .voucher-box {
+        gap: 15px;
+    }
+
+    @keyframes giftFloat {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-6px);
+        }
+
+    }
+
+}
   .price-details {
     display: flex;
     align-items: center;
