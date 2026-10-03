@@ -1,0 +1,734 @@
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf0;
+    color: #3f2025;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #3f2025;
+    border-bottom: 1px solid #eadbdd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: whitesmoke;
+    white-space: nowrap;
+}
+
+.logo .highlight {
+    font-size: 36px;
+    font-weight: bold;
+    color: #d75a70;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d75a70;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #d75a70;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: white;
+    font-size: 19px;
+}
+
+.nav-icons a {
+    transition: 0.3s;
+}
+
+.nav-icons a:hover {
+    color: #d75a70;
+}
+
+/* HERO */
+.blog-hero {
+    min-height: 560px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image:
+        url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=2000&q=85");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(63, 32, 37, 0.86),
+        rgba(63, 32, 37, 0.42)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    padding: 75px 8%;
+    color: white;
+}
+
+.hero-label,
+.section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #d75a70;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: clamp(48px, 6vw, 78px);
+    font-weight: 400;
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    max-width: 520px;
+    font-size: 16px;
+    color: #fff1f1;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: #3f2025;
+    color: white;
+    padding: 14px 26px;
+    border: 1px solid #3f2025;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #d75a70;
+    border-color: #d75a70;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* INTRODUCTION */
+.blog-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    padding: 85px 25px 75px;
+}
+
+.blog-intro h2,
+.section-heading h2,
+.featured-content h2,
+.tips-content h2,
+.newsletter h2 {
+    font-family: Cambria, Georgia, serif;
+    color: #3f2025;
+    font-size: clamp(32px, 4vw, 45px);
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.blog-intro > p:last-child {
+    max-width: 720px;
+    margin: auto;
+    color: #765c61;
+    font-size: 15px;
+}
+
+/* FEATURED ARTICLE */
+.featured-blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 65px 8%;
+    background: #f8e6e4;
+}
+
+.featured-image {
+    height: 440px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.featured-image:hover img {
+    transform: scale(1.04);
+}
+
+.featured-content h2 {
+    font-size: clamp(32px, 3.5vw, 43px);
+}
+
+.featured-content > p:not(.section-label):not(.blog-meta) {
+    color: #765c61;
+    font-size: 15px;
+    margin: 22px 0;
+}
+
+.blog-meta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #a45a68;
+    margin-bottom: 15px;
+}
+
+.blog-meta i {
+    margin-right: 6px;
+}
+
+.blog-meta span {
+    padding: 0 8px;
+}
+
+/* LATEST BLOGS */
+.latest-blogs {
+    padding: 85px 7%;
+    background: #fffaf0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading > p:last-child {
+    color: #765c61;
+    font-size: 15px;
+}
+
+.blog-grid {
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 25px;
+}
+
+.blog-card {
+    background: #ffffff;
+    border: 1px solid #eadbdd;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(63, 32, 37, 0.12);
+}
+
+.blog-image {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    background: #f8e6e4;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.06);
+}
+
+.blog-category {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #3f2025;
+    color: white;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.blog-content {
+    padding: 25px 22px 28px;
+}
+
+.blog-content h3 {
+    color: #3f2025;
+    font-family: Cambria, Georgia, serif;
+    font-size: 23px;
+    line-height: 1.35;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.blog-content > p:not(.blog-meta) {
+    font-size: 14px;
+    color: #765c61;
+    margin-bottom: 22px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #3f2025;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #d75a70;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: #d75a70;
+    gap: 14px;
+}
+
+/* BEAUTY TIPS */
+.beauty-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    background: #f5afaf;
+}
+
+.tips-content {
+    padding: 75px 10%;
+    align-self: center;
+}
+
+.tips-content h2 {
+    font-size: clamp(32px, 4vw, 46px);
+}
+
+.tips-content > p:not(.section-label) {
+    color: #542f35;
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
+.tips-image {
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.tips-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    text-align: center;
+    padding: 85px 20px;
+    background: #fffaf0;
+}
+
+.newsletter > p:not(.section-label):not(.newsletter-message) {
+    color: #765c61;
+    font-size: 15px;
+    margin: 0 auto 25px;
+    max-width: 620px;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 600px;
+    margin: 30px auto 0;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid #c9b8b8;
+    outline: none;
+    font-size: 14px;
+}
+
+.newsletter-form input:focus {
+    border-color: #d75a70;
+}
+
+.newsletter-form button {
+    padding: 15px 24px;
+    border: 1px solid #3f2025;
+    background: #3f2025;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #d75a70;
+    border-color: #d75a70;
+}
+
+.newsletter-message {
+    margin-top: 15px;
+    color: #3f2025;
+    font-size: 13px;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background: #3f2025;
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 65px 25px 55px;
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: 35px;
+    align-items: start;
+}
+
+.footer-logo {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #e27688;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: #eadbdd;
+    margin-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.social-icons a {
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e27688;
+    transform: translateY(-3px);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    font-size: 13px;
+    color: #eadbdd;
+    margin-bottom: 11px;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #e27688;
+    padding-left: 3px;
+}
+
+.footer-bottom {
+    width: 100%;
+    min-height: 60px;
+    border-top: 1px solid #633b42;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+    color: #d9c6c9;
+    margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1050px) {
+    .navbar {
+        padding: 15px 4%;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 29px;
+    }
+
+    .logo .highlight {
+        font-size: 31px;
+    }
+
+    .featured-blog {
+        padding: 55px 5%;
+        gap: 35px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 4%;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+    }
+
+    .nav-icons {
+        gap: 16px;
+    }
+
+    .blog-hero {
+        min-height: 470px;
+    }
+
+    .hero-content {
+        padding: 55px 7%;
+    }
+
+    .featured-blog,
+    .beauty-tips {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        height: 350px;
+    }
+
+    .featured-content {
+        padding-bottom: 15px;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .blog-image {
+        height: 220px;
+    }
+
+    .blog-content {
+        padding: 20px 16px;
+    }
+
+    .blog-content h3 {
+        font-size: 20px;
+    }
+
+    .tips-content {
+        padding: 55px 7%;
+    }
+
+    .tips-image,
+    .tips-image img {
+        min-height: 320px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-links {
+        gap: 12px 17px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .blog-hero {
+        min-height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .blog-intro,
+    .latest-blogs {
+        padding: 55px 5%;
+    }
+
+    .featured-blog {
+        padding: 40px 5%;
+    }
+
+    .featured-image {
+        height: 270px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-image {
+        height: 270px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 45px 6%;
+        gap: 30px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
