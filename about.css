@@ -10,7 +10,7 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5afaf;
+    background: #fffaf0;
     color: #171717;
   }
   
@@ -206,7 +206,7 @@
 .community-section {
     width: 100%;
     padding: 90px 7%;
-    background: #f5afaf;
+    background: #fffaf0;
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
